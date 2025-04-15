@@ -1,5 +1,4 @@
 from flask import Blueprint, render_template
-# Task 9,10,11: Add the code from here
 from .models import Result
 import openai
 from flask import request
@@ -22,7 +21,6 @@ def ask(question, chat_log=None):
     answer = response.choices[0].text.strip()
     return answer
 
-# Task 5,7,11,12,13: Change the below code 
 
 historyData = []
 @routes.route('/', methods=['GET', 'POST'])
